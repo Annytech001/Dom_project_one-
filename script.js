@@ -60,12 +60,12 @@ function incrementOrder(productId, intent){
     */
   
     // Event listener for delete buttons
-    // document.querySelectorAll(".fa-trash-alt").forEach((btn) => {
-    //   btn.addEventListener("click", function () {
-    //     this.closest(".card-body").remove();
+     document.querySelectorAll(".fa-trash-alt").forEach((btn) => {
+      btn.addEventListener("click", function () {
+      this.closest(".card-body.item" ).remove();
     //    // updateTotalPrice();
-    //   });
-    // });
+     });
+     });
   
     // Initial total price calculation
     //updateTotalPrice();
