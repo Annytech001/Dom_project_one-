@@ -1,14 +1,26 @@
-function incrementOrder(productId){
+function incrementOrder(productId, intent){
     const container = document.getElementById(productId);
     const quantity = container.querySelector('.quantity');
     const total = container.querySelector('.total');
     const unitPrice = container.querySelector('.unit-price').innerText.replace("$", "").trim();
-    const quantityValue = parseInt(quantity.innerText)
+    let quantityValue = parseInt(quantity.innerText);
 
+    if (intent == 'add'){
+        quantityValue = quantityValue + 1;
+    }
+   else{
+    if (quantityValue > 0){
+        quantityValue = quantityValue - 1;
+    }
+   }
     const unitPriceValue = parseInt(unitPrice);
+    quantity.innerText = quantityValue
+    total.innerText = (unitPriceValue * quantityValue) + "$"
 }
+
 document.addEventListener("DOMContentLoaded", function () {
     // Function to update the total price
+    /*
     function updateTotalPrice() {
       let total = 0;
       document.querySelectorAll(".card-body").forEach((productCard) => {
@@ -32,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updateTotalPrice();
       });
     });
+
   
     // Event listener for minus buttons
     document.querySelectorAll(".fa-minus-circle").forEach((btn) => {
@@ -44,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+    */
   
     // Event listener for delete buttons
     document.querySelectorAll(".fa-trash-alt").forEach((btn) => {

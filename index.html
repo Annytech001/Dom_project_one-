@@ -106,9 +106,9 @@
                     <span class="total"> 0 $ </span>
                   </div>
                 <div>
-                  <i onclick="incrementOrder('basket')" class="fas fa-plus-circle"></i>
+                  <i onclick="incrementOrder('basket', 'add')" class="fas fa-plus-circle"></i>
                   <span class="quantity">0</span>
-                  <i class="fas fa-minus-circle"></i>
+                  <i onclick="incrementOrder('basket', 'subtract')" class="fas fa-minus-circle"></i>
                 </div>
                 <div>
                   <i class="fas fa-trash-alt"></i>
@@ -119,7 +119,7 @@
           </div>
           <!-- Product 2 : socks -->
 
-          <div class="card-body">
+          <div class="card-body" id="socks">
             <div class="card" style="width: 18rem">
               <img src="/images/socks.png" class="card-img-top" alt="socks" />
               <div class="card-body">
@@ -131,9 +131,9 @@
                     <span class="total"> 0 $ </span>
                   </div>
                 <div>
-                  <i class="fas fa-plus-circle"></i>
+                  <i onclick="incrementOrder('socks', 'add')" class="fas fa-plus-circle"></i>
                   <span class="quantity">0</span>
-                  <i class="fas fa-minus-circle"></i>
+                  <i onclick="incrementOrder('socks', 'subtract')"class="fas fa-minus-circle"></i>
                 </div>
                 <div>
                   <i class="fas fa-trash-alt"></i>
@@ -143,7 +143,7 @@
             </div>
           </div>
           <!-- Product 3 : bag -->
-          <div class="card-body">
+          <div class="card-body" id="bag">
             <div class="card" style="width: 18rem">
               <img src="/images/bag.png" class="card-img-top" alt="bag" />
               <div class="card-body">
@@ -155,9 +155,9 @@
                     <span class="total"> 0 $ </span>
                   </div>
                 <div>
-                  <i class="fas fa-plus-circle"></i>
+                  <i onclick="incrementOrder('bag', 'add')"class="fas fa-plus-circle"></i>
                   <span class="quantity">0</span>
-                  <i class="fas fa-minus-circle"></i>
+                  <i onclick="incrementOrder('bag', 'subtract')"class="fas fa-minus-circle"></i>
                 </div>
                 <div>
                   <i class="fas fa-trash-alt"></i>
