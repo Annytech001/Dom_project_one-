@@ -18,7 +18,7 @@ function incrementOrder(productId, intent){
     total.innerText = (unitPriceValue * quantityValue) + "$"
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+//document.addEventListener("DOMContentLoaded", function () {
     // Function to update the total price
     /*
     function updateTotalPrice() {
@@ -60,19 +60,19 @@ document.addEventListener("DOMContentLoaded", function () {
     */
   
     // Event listener for delete buttons
-    document.querySelectorAll(".fa-trash-alt").forEach((btn) => {
-      btn.addEventListener("click", function () {
-        this.closest(".card-body").remove();
-        updateTotalPrice();
-      });
-    });
+    // document.querySelectorAll(".fa-trash-alt").forEach((btn) => {
+    //   btn.addEventListener("click", function () {
+    //     this.closest(".card-body").remove();
+    //    // updateTotalPrice();
+    //   });
+    // });
   
     // Initial total price calculation
-    updateTotalPrice();
-  });
+    //updateTotalPrice();
+  //});
 
   // Event listener for heart buttons
-  document.querySelectorAll(".fa-heart").forEach((btn) => {
+  document.querySelectorAll(".fas.fa-heart").forEach((btn) => {
     btn.addEventListener("click", function () {
       this.classList.toggle("liked");
     });

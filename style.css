@@ -66,11 +66,11 @@
   .fa-trash-alt {
     color: #de6b5c;
   }
-  .fas fa-heart {
-    color: rgb(187, 29, 29); /* Default color */
+  .fas.fa-heart{
+    color: black; 
     cursor: pointer;
   }
   
-  .fas fa-heart.liked {
-    color: rgb(0, 255, 157); /* Liked state color */
+  .fas.fa-heart.liked {
+    color: rgb(152, 17, 7);
   }
